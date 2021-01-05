@@ -1,0 +1,58 @@
+{
+    "pluginName": "maven仓库查询",
+    "description": "maven和gradle依赖查询",
+    "author": "景培培哎",
+    "version": "0.0.1",
+    "logo": "LOGO.png",
+    "preload": "preload.js",
+    "features": [
+        {
+            "code": "maven-central",
+            "explain": "根据来名称查询central仓库，格式为maven格式（maven默认调用）",
+            "cmds": [
+                "maven",
+                "maven-central",
+                "mvn",
+                "mvn-central"
+            ]
+        },
+        {
+            "code": "gradle-central",
+            "explain": "根据来名称查询central仓库，格式为gradle格式（gradle默认调用）",
+            "cmds": [
+                "gradle",
+                "gradle-central"
+            ]
+        },
+        {
+            "code": "maven-jcenter",
+            "explain": "根据来名称查询jcenter仓库，格式为maven格式",
+            "cmds": [
+                "maven",
+                "mvn-jcenter"
+            ]
+        },
+        {
+            "code": "gradle-jcenter",
+            "explain": "根据来名称查询jcenter仓库，格式为gradle格式",
+            "cmds": [
+                "gradle-jcenter"
+            ]
+        },
+        {
+            "code": "maven-google",
+            "explain": "根据来名称查询google仓库，格式为maven格式",
+            "cmds": [
+                "maven-google",
+                "mvn-google"
+            ]
+        },
+        {
+            "code": "gradle-google",
+            "explain": "根据来名称查询google仓库，格式为gradle格式",
+            "cmds": [
+                "gradle-google"
+            ]
+        }
+    ]
+}
