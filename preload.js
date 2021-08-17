@@ -60,7 +60,12 @@ function dataCollation(object) {
             item['v'] = element.v
             key = element.v
         }
-
+        // 是否存在时间戳，如果存在，添加
+        if (element.timestamp !== undefined) {
+            var newDate = new Date();
+            newDate.setTime(element.timestamp);
+            item['timestamp'] = newDate.toLocaleDateString();
+        }
         // 保存成合适的格式便于展示
         container[key] = item
     });
@@ -128,7 +133,8 @@ var versionQuery = function (item, callbackSetList) {
             console.log('转换后的结果', searchItems)
             for (const key in searchItems) {
                 result.push({
-                    title: key
+                    title: key,
+                    description: '发布时间: ' + searchItems[key].timestamp
                 })
             }
             callbackSetList(result)
